@@ -16,7 +16,7 @@ namespace Appalachia.Editor.Preferences.Easy
         private static readonly Dictionary<string, List<EasyEditorPrefBase>> _projectSettingsByPath =
             new Dictionary<string, List<EasyEditorPrefBase>>();
 
-        [SettingsProvider]
+        [SettingsProviderGroup]
         public static SettingsProvider[] GetSettingsProviders()
         {
             _settingsRetrieved = true;
@@ -26,7 +26,7 @@ namespace Appalachia.Editor.Preferences.Easy
                 return null;
             }
 
-            var providers = new List<SettingsProvider>();
+            var providers = new List<DynamicSettingsProvider>();
 
             foreach (var scope in Enum.GetValues(typeof(SettingsScope)).Cast<SettingsScope>())
             {
@@ -38,10 +38,7 @@ namespace Appalachia.Editor.Preferences.Easy
 
                     var label = path.Split(new[] {'/'}, StringSplitOptions.RemoveEmptyEntries).Last();
 
-                    var provider = new SettingsProvider(path, SettingsScope.User)
-                    {
-                        guiHandler = searchContext => DrawUI(preferences), label = label
-                    };
+                    var provider = new DynamicSettingsProvider(path, SettingsScope.User, preferences) {label = label};
 
                     providers.Add(provider);
                 }
@@ -64,14 +61,6 @@ namespace Appalachia.Editor.Preferences.Easy
             if (_settingsRetrieved)
             {
                 SettingsService.NotifySettingsProviderChanged();
-            }
-        }
-
-        private static void DrawUI(List<EasyEditorPrefBase> prefs)
-        {
-            foreach(var pref in prefs)
-            {
-                pref.DrawUI();
             }
         }
     }

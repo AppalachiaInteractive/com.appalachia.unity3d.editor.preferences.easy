@@ -1,11 +1,11 @@
 using System;
 using System.Collections.Generic;
 using UnityEditor;
+using UnityEngine;
 
 namespace Appalachia.Editor.Preferences.Easy.Base
 {
     public abstract class EasyEditorPref<T> : EasyEditorPrefBase, IEquatable<EasyEditorPref<T>>, IEquatable<T>
-        where T : IConvertible
     {
         public readonly T defaultValue;
 
@@ -15,7 +15,21 @@ namespace Appalachia.Editor.Preferences.Easy.Base
             string label,
             T defaultValue,
             SettingsScope scope,
-            int order) : base(path, key, label, scope, order)
+            int order,
+            Func<bool> drawIf,
+            Func<bool> enableIf,
+            Action actionButton,
+            string actionLabel) : base(
+            path,
+            key,
+            label,
+            scope,
+            order,
+            drawIf,
+            enableIf,
+            actionButton,
+            actionLabel
+        )
         {
             this.defaultValue = defaultValue;
         }
@@ -44,30 +58,56 @@ namespace Appalachia.Editor.Preferences.Easy.Base
 
         public override void DrawUI()
         {
-            EditorGUI.BeginChangeCheck();
-
-            var value = Draw();
-
-            if (EditorGUI.EndChangeCheck())
-            {
-                Value = value;
-            }
+            DrawInternal(Draw);
         }
-
-        protected abstract T Draw();
 
         public override void DrawDelayedUI()
         {
+            DrawInternal(DrawDelayed);
+        }
+
+        private void DrawInternal(Func<T> drawAction)
+        {
+            if ((drawIf != null) && !drawIf())
+            {
+                return;
+            }
+
+            var guiEnabled = GUI.enabled;
+            if (enableIf != null)
+            {
+                GUI.enabled = enableIf();
+            }
+
             EditorGUI.BeginChangeCheck();
 
-            var value = DrawDelayed();
+            T value;
+            using (new EditorGUILayout.HorizontalScope())
+            {
+                value = drawAction();
+
+                if (actionButton != null)
+                {
+                    EditorGUILayout.Space(1.0f, false);
+                    var label = new GUIContent(actionLabel ?? "   ");
+                    
+                    var width = EditorStyles.miniButton.CalcSize(label).x;
+                    if (GUILayout.Button(label, EditorStyles.miniButton, GUILayout.Width(width+10f)))
+                    {
+                        actionButton();
+                    }
+                }
+            }
 
             if (EditorGUI.EndChangeCheck())
             {
                 Value = value;
             }
+
+            GUI.enabled = guiEnabled;
         }
 
+        protected abstract T Draw();
         protected abstract T DrawDelayed();
 
         public override bool Equals(object obj)

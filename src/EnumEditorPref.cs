@@ -17,7 +17,22 @@ namespace Appalachia.Editor.Preferences.Easy
             T defaultValue = default,
             SettingsScope scope = SettingsScope.User,
             int order = 0,
-            Func<T, string> postfixer = null) : base(path, key, label, defaultValue, scope, order)
+            Func<bool> drawIf = null,
+            Func<bool> enableIf = null,
+            Action actionButton = null,
+            string actionLabel = "Action",
+            Func<T, string> postfixer = null) : base(
+            path,
+            key,
+            label,
+            defaultValue,
+            scope,
+            order,
+            drawIf,
+            enableIf,
+            actionButton,
+            actionLabel
+        )
         {
             _postfixer = postfixer;
         }

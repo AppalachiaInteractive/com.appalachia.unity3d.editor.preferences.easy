@@ -1,3 +1,4 @@
+using System;
 using Appalachia.Editor.Preferences.Easy.Base;
 using UnityEditor;
 
@@ -11,7 +12,22 @@ namespace Appalachia.Editor.Preferences.Easy
             string label,
             string defaultValue = default,
             SettingsScope scope = SettingsScope.User,
-            int order = 0) : base(path, key, label, defaultValue, scope, order)
+            int order = 0,
+            Func<bool> drawIf = null,
+            Func<bool> enableIf = null,
+            Action actionButton = null,
+            string actionLabel = "Action") : base(
+            path,
+            key,
+            label,
+            defaultValue,
+            scope,
+            order,
+            drawIf,
+            enableIf,
+            actionButton,
+            actionLabel
+        )
         {
         }
 
