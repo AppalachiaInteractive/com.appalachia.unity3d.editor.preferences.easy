@@ -9,7 +9,8 @@ Something went wrong...
 ## Releasing
 | Hash | Date | Author | Changes |
 |------|------|--------|---------|
-| ab0b24c | 2021-05-06 | Chris Schubert | Packaging fixups |
+| f14716c | 2021-05-06 | Chris Schubert | Missed a meta file |
+\n\n ## Tag: v0.1.1\n| Hash | Date | Author | Changes |\n|------|------|--------|---------|\n| ab0b24c | 2021-05-06 | Chris Schubert | Packaging fixups |
 \n\n ## Tag: v0.2.0\n| Hash | Date | Author | Changes |\n|------|------|--------|---------|\n| fbd84e5 | 2021-05-06 | Chris Schubert | Fixing bad description in package.json |
 | ccadcfa | 2021-05-06 | Chris Schubert | Preparing for packaging |
 | cd5879f | 2021-05-06 | Chris Schubert | Adding meta files |
