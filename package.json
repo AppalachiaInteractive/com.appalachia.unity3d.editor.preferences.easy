@@ -3,7 +3,7 @@
   "displayName": "Easy Editor Preferences for Unity3D",
   "version": "0.1.0",
   "unity": "2020.3",
-  "description": "Easy-to-use but powerful Editor Preferences for Unity3D.  Automatically managed - all you have to do is replace your simple field properties with the corresponding "*EditorPref" class.  SUpports bool, float, int, string, and enums.",
+  "description": "Automatically creates, updates, and draws custom Editor Preferences in the Settings window. Supports bool, float, int, string, as well as enums (int-backed) and color. ",
   "keywords": [
     "Scripts",
     "Tool"
