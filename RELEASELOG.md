@@ -9,9 +9,10 @@
 ```
 
 
-# 0.2.0
+# 0.1.1
 | Hash | Date | Author | Changes |
 |------|------|--------|---------|
+| ab0b24c | 2021-05-06 | Chris Schubert | Packaging fixups |
 | fbd84e5 | 2021-05-06 | Chris Schubert | Fixing bad description in package.json |
 | ccadcfa | 2021-05-06 | Chris Schubert | Preparing for packaging |
 | cd5879f | 2021-05-06 | Chris Schubert | Adding meta files |
