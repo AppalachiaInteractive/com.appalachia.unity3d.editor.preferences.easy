@@ -13,11 +13,26 @@ jobs:
         fetch-depth: 0
     - name: split upm branch
       run: |
+        git config --global user.name 'github-bot'
+        git config --global user.email 'github-bot@users.noreply.github.com'
+
+        git branch -d upm &> /dev/null
         git checkout -b upm
-        rm package.json
-        mv package.upm.json package.json
-        git commit -m "UPM package fix"
-        new_tag=upm-$(git tag|tail -1)
+
+        if [[ -f package.upm.json ]]; then
+          rm package.json
+          mv package.upm.json package.json
+        fi
+
+        if [[ -d "Samples" ]]; then
+          git mv Samples Samples~
+          rm -f Samples.meta
+        fi
+
+        git commit -am "UPM package fix"
+
+        new_tag="upm-$(git tag|tail -1)"
         git tag "$new_tag" 
-        git push -u origin upm
+        
+        git push -f -u origin upm
         git push --tags
