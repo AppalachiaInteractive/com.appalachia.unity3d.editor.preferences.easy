@@ -1,4 +1,4 @@
-Copyright © `2021` `Appalachia Interactive`  
+Copyright 2021 Appalachia Interactive
 Licensed under:
 
 The MIT License (MIT)
@@ -6,7 +6,7 @@ The MIT License (MIT)
 
 Permission is hereby granted, free of charge, to any person
 obtaining a copy of this software and associated documentation
-files (the ìSoftwareî), to deal in the Software without
+files (the ‚ÄúSoftware‚Äù), to deal in the Software without
 restriction, including without limitation the rights to use,
 copy, modify, merge, publish, distribute, sublicense, and/or sell
 copies of the Software, and to permit persons to whom the
@@ -16,7 +16,7 @@ conditions:
 The above copyright notice and this permission notice shall be
 included in all copies or substantial portions of the Software.
 
-THE SOFTWARE IS PROVIDED ìAS ISî, WITHOUT WARRANTY OF ANY KIND,
+THE SOFTWARE IS PROVIDED ‚ÄúAS IS‚Äù, WITHOUT WARRANTY OF ANY KIND,
 EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
 OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
 NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT
