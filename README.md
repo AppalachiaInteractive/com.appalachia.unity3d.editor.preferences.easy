@@ -1,6 +1,7 @@
 # Easy Editor Preferences for Unity3D
 `com.appalachia.unity3d.editor.preferences.easy`
 #### Created by Appalachia Interactive
+[![openupm](https://img.shields.io/npm/v/com.appalachia.unity3d.editor.preferences.easy?label=openupm&registry_uri=https://package.openupm.com)](https://openupm.com/packages/com.appalachia.unity3d.editor.preferences.easy/)
 
 Automatically creates, updates, and draws custom Editor Preferences in the Settings window.  Supports bool, float, int, string, as well as **enums** (int-backed) and *color*.
 
