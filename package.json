@@ -1,7 +1,7 @@
 {
   "name": "com.appalachia.unity3d.editor.preferences.easy",
   "displayName": "Easy Editor Preferences for Unity3D",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "unity": "2020.3",
   "description": "Automatically creates, updates, and draws custom Editor Preferences in the Settings window. Supports bool, float, int, string, as well as enums (int-backed) and color.",
   "keywords": [
