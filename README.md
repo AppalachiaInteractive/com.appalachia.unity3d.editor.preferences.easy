@@ -71,3 +71,12 @@ The following UI (used in `com.appalachia.unity3d.editor.preferences`) is genera
     }
  
 ```
+
+## Copyright
+
+All contributions on behalf of `Appalachia Interactive`, or directly via `com.appalachia` projects: Copyright (c) `2021` `Appalachia Interactive`.
+
+## Licensing
+
+This project and its respective files and directories contains many license and copyright notices.  
+Please see DBRL.md for information regarding how these notices should be interpreted and applied.
