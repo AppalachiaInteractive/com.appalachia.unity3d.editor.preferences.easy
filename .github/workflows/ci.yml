@@ -13,8 +13,8 @@ jobs:
         fetch-depth: 0
     - name: split upm branch
       run: |
-        current="$(git describe)"
-        last_tag="$(git describe --abbrev=0)"
+        current="$(git describe --tags)"
+        last_tag="$(git describe --abbrev=0 --tags)"
 
         if [ "${current}" != "${last_tag}" ]; then
           echo 'Not a tagged release.'
