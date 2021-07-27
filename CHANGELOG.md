@@ -12,6 +12,12 @@
 ## Releasing
 | Hash | Date | Author | Changes |
 |------|------|--------|---------|
+| cf9628a34c44c099d14cbb23ac2373acf1263d94 | 2021-07-27 | Chris Schubert | Updating package name |
+
+
+ ## Tag: `v0.1.6`
+| Hash | Date | Author | Changes |
+|------|------|--------|---------|
 | f25b880f5c66362bfb887548620141bc4ba36427 | 2021-07-27 | Chris Schubert | Updates |
 | 935d48e446c26c0fdf127a2d6644fb6ef3c8ec76 | 2021-05-10 | Chris Schubert | social image updates |
 | a73fb711b060a84eaf6481116d86ccdb5a4ce223 | 2021-05-07 | Chris Schubert | Merge branch 'main' of https://github.com/AppalachiaInteractive/com.appalachia.unity3d.editor.preferences.easy |
