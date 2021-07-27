@@ -1,9 +1,14 @@
 # Easy Editor Preferences for Unity3D
+
 `com.appalachia.unity3d.editor.preferences.easy`
-#### Created by Appalachia Interactive
-[![openupm](https://img.shields.io/npm/v/com.appalachia.unity3d.editor.preferences.easy?label=openupm&registry_uri=https://package.openupm.com)](https://openupm.com/packages/com.appalachia.unity3d.editor.preferences.easy/)
+
+![license](https://img.shields.io/github/license/AppalachiaInteractive/com.appalachia.unity3d.editor.preferences.easy?)
+![commits](https://img.shields.io/github/commit-activity/m/AppalachiaInteractive/com.appalachia.unity3d.editor.preferences.easy?)
 ![build](https://img.shields.io/github/workflow/status/AppalachiaInteractive/com.appalachia.unity3d.editor.preferences.easy/CI)
-![license](https://img.shields.io/github/license/AppalachiaInteractive/com.appalachia.unity3d.editor.preferences.easy)
+[![openupm](https://img.shields.io/npm/v/com.appalachia.unity3d.editor.preferences.easy?label=openupm&registry_uri=https://package.openupm.com)](https://openupm.com/packages/com.appalachia.unity3d.editor.preferences.easy?/)
+
+#### Created by Appalachia Interactive
+
 
 Automatically creates, updates, and draws custom Editor Preferences in the Settings window.  Supports bool, float, int, string, as well as **enums** (int-backed) and *color*.
 
@@ -72,11 +77,5 @@ The following UI (used in `com.appalachia.unity3d.editor.preferences`) is genera
  
 ```
 
-## Copyright
-
-All contributions on behalf of `Appalachia Interactive`, or directly via `com.appalachia` projects: Copyright (c) `2021` `Appalachia Interactive`.
-
-## Licensing
-
-This project and its respective files and directories contains many license and copyright notices.  
-Please see DBRL.md for information regarding how these notices should be interpreted and applied.
+## Legal and Licensing
+For legal and licensing information please see [LEGAL.md](./LEGAL.md).

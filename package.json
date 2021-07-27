@@ -1,5 +1,5 @@
 {
-  "name": "com.appalachia.unity3d.editor.preferences.easy",
+  "name": "@AppalachiaInteractive/com.appalachia.unity3d.editor.preferences.easy",
   "displayName": "Easy Editor Preferences for Unity3D",
   "version": "0.1.5",
   "unity": "2020.3",
@@ -19,7 +19,7 @@
     "type": "git"
   },
   "publishConfig": {
-    "registry": "http://localhost:4873/"
+    "registry": "https://npm.pkg.github.com"
   },
   "scripts": {
     "preversion": "bash ~/com.appalachia/appa/appa package unity3d preversion",
