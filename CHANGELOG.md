@@ -12,6 +12,12 @@
 ## Releasing
 | Hash | Date | Author | Changes |
 |------|------|--------|---------|
+| a640fd2682712c401a0e705674e7546453ab15b1 | 2021-09-28 | Chris Schubert | Packaging and CI update |
+
+
+ ## Tag: `v0.1.7`
+| Hash | Date | Author | Changes |
+|------|------|--------|---------|
 | cf9628a34c44c099d14cbb23ac2373acf1263d94 | 2021-07-27 | Chris Schubert | Updating package name |
 
 
