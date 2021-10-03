@@ -1,4 +1,5 @@
 using System;
+using Appalachia.Editor.Preferences.Easy.Provider;
 using UnityEditor;
 
 namespace Appalachia.Editor.Preferences.Easy.Base

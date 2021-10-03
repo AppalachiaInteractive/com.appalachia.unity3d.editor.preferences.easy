@@ -4,7 +4,7 @@ using System.Linq;
 using Appalachia.Editor.Preferences.Easy.Base;
 using UnityEditor;
 
-namespace Appalachia.Editor.Preferences.Easy
+namespace Appalachia.Editor.Preferences.Easy.Provider
 {
     public static class EditorPrefCollection
     {

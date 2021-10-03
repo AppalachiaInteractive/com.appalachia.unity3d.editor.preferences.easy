@@ -5,7 +5,7 @@ using Appalachia.Editor.Preferences.Easy.Base;
 using UnityEditor;
 using UnityEngine;
 
-namespace Appalachia.Editor.Preferences.Easy
+namespace Appalachia.Editor.Preferences.Easy.Provider
 {
     public class DynamicSettingsProvider : SettingsProvider
     {
