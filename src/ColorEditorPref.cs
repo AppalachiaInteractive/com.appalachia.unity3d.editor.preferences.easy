@@ -73,11 +73,10 @@ namespace Appalachia.Editor.Preferences.Easy
 
         public static Color ToRGBA(uint hex)
         {
-            return new Color(
-                ((hex >> 16) & 0xff) / 255f, // r
-                ((hex >> 8) & 0xff) / 255f,  // g
-                (hex & 0xff) / 255f,         // b
-                ((hex >> 24) & 0xff) / 255f  // a
+            return new(((hex >> 16) & 0xff) / 255f, // r
+                ((hex >> 8) & 0xff) / 255f,         // g
+                (hex & 0xff) / 255f,                // b
+                ((hex >> 24) & 0xff) / 255f         // a
             );
         }
     }

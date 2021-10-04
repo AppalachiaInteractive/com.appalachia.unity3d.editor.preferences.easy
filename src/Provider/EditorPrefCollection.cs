@@ -11,10 +11,10 @@ namespace Appalachia.Editor.Preferences.Easy.Provider
         private static bool _settingsRetrieved;
 
         private static readonly Dictionary<string, List<EasyEditorPrefBase>> _userSettingsByPath =
-            new Dictionary<string, List<EasyEditorPrefBase>>();
+            new();
 
-        private static readonly Dictionary<string, List<EasyEditorPrefBase>> _projectSettingsByPath =
-            new Dictionary<string, List<EasyEditorPrefBase>>();
+        private static readonly Dictionary<string, List<EasyEditorPrefBase>>
+            _projectSettingsByPath = new();
 
         [SettingsProviderGroup]
         public static SettingsProvider[] GetSettingsProviders()
@@ -30,15 +30,22 @@ namespace Appalachia.Editor.Preferences.Easy.Provider
 
             foreach (var scope in Enum.GetValues(typeof(SettingsScope)).Cast<SettingsScope>())
             {
-                var pathCollection = scope == SettingsScope.Project ? _projectSettingsByPath : _userSettingsByPath;
+                var pathCollection = scope == SettingsScope.Project
+                    ? _projectSettingsByPath
+                    : _userSettingsByPath;
 
                 foreach (var path in pathCollection.Keys)
                 {
                     var preferences = pathCollection[path];
 
-                    var label = path.Split(new[] {'/'}, StringSplitOptions.RemoveEmptyEntries).Last();
+                    var label = path.Split(new[] {'/'}, StringSplitOptions.RemoveEmptyEntries)
+                                    .Last();
 
-                    var provider = new DynamicSettingsProvider(path, SettingsScope.User, preferences) {label = label};
+                    var provider =
+                        new DynamicSettingsProvider(path, SettingsScope.User, preferences)
+                        {
+                            label = label
+                        };
 
                     providers.Add(provider);
                 }
@@ -49,7 +56,9 @@ namespace Appalachia.Editor.Preferences.Easy.Provider
 
         public static void Register(string path, SettingsScope scope, EasyEditorPrefBase pref)
         {
-            var pathCollection = scope == SettingsScope.Project ? _projectSettingsByPath : _userSettingsByPath;
+            var pathCollection = scope == SettingsScope.Project
+                ? _projectSettingsByPath
+                : _userSettingsByPath;
 
             if (!pathCollection.ContainsKey(path))
             {

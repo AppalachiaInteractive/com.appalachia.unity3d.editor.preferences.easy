@@ -66,7 +66,11 @@ namespace Appalachia.Editor.Preferences.Easy
                     var size = EditorStyles.label.CalcSize(new GUIContent(postfix));
 
                     EditorGUIUtility.labelWidth = 2 * size.x;
-                    EditorGUILayout.LabelField(postfix, EditorStyles.boldLabel, GUILayout.Width(2 * size.x));
+                    EditorGUILayout.LabelField(
+                        postfix,
+                        EditorStyles.boldLabel,
+                        GUILayout.Width(2 * size.x)
+                    );
 
                     EditorGUIUtility.labelWidth = labelWidth;
                     return value;

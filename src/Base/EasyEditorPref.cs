@@ -5,7 +5,9 @@ using UnityEngine;
 
 namespace Appalachia.Editor.Preferences.Easy.Base
 {
-    public abstract class EasyEditorPref<T> : EasyEditorPrefBase, IEquatable<EasyEditorPref<T>>, IEquatable<T>
+    public abstract class EasyEditorPref<T> : EasyEditorPrefBase,
+                                              IEquatable<EasyEditorPref<T>>,
+                                              IEquatable<T>
     {
         public readonly T defaultValue;
 
@@ -53,7 +55,8 @@ namespace Appalachia.Editor.Preferences.Easy.Base
 
         public bool Equals(T other)
         {
-            return !ReferenceEquals(null, other) && EqualityComparer<T>.Default.Equals(Value, other);
+            return !ReferenceEquals(null, other) &&
+                   EqualityComparer<T>.Default.Equals(Value, other);
         }
 
         public override void DrawUI()
@@ -90,9 +93,13 @@ namespace Appalachia.Editor.Preferences.Easy.Base
                 {
                     EditorGUILayout.Space(1.0f, false);
                     var label = new GUIContent(actionLabel ?? "   ");
-                    
+
                     var width = EditorStyles.miniButton.CalcSize(label).x;
-                    if (GUILayout.Button(label, EditorStyles.miniButton, GUILayout.Width(width+10f)))
+                    if (GUILayout.Button(
+                        label,
+                        EditorStyles.miniButton,
+                        GUILayout.Width(width + 10f)
+                    ))
                     {
                         actionButton();
                     }
@@ -134,7 +141,8 @@ namespace Appalachia.Editor.Preferences.Easy.Base
         {
             unchecked
             {
-                return ((key != null ? key.GetHashCode() : 0) * 397) ^ EqualityComparer<T>.Default.GetHashCode(Value);
+                return ((key != null ? key.GetHashCode() : 0) * 397) ^
+                       EqualityComparer<T>.Default.GetHashCode(Value);
             }
         }
 

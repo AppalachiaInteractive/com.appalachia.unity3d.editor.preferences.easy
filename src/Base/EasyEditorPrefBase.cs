@@ -6,14 +6,14 @@ namespace Appalachia.Editor.Preferences.Easy.Base
 {
     public abstract class EasyEditorPrefBase
     {
-        public readonly string path;
+        public readonly Action actionButton;
+        public readonly string actionLabel;
+        public readonly Func<bool> drawIf;
+        public readonly Func<bool> enableIf;
         public readonly string key;
         public readonly string label;
         public readonly int order;
-        public readonly Func<bool> drawIf;
-        public readonly Func<bool> enableIf;
-        public readonly Action actionButton;
-        public readonly string actionLabel;
+        public readonly string path;
 
         protected EasyEditorPrefBase(
             string path,
