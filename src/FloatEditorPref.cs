@@ -1,8 +1,8 @@
 using System;
-using Appalachia.Editor.Preferences.Easy.Base;
+using Appalachia.Utility.Editor.Preferences.Easy.Base;
 using UnityEditor;
 
-namespace Appalachia.Editor.Preferences.Easy
+namespace Appalachia.Utility.Editor.Preferences.Easy
 {
     public class FloatEditorPref : EasyEditorPref<float>
     {

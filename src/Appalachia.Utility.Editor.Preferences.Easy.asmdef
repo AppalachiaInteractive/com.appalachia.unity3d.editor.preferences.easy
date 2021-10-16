@@ -1,5 +1,5 @@
 {
-    "name": "Appalachia.Editor.Preferences.Easy",
+    "name": "Appalachia.Utility.Editor.Preferences.Easy",
     "rootNamespace": "",
     "references": [],
     "includePlatforms": [

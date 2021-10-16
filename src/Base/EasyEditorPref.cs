@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 
-namespace Appalachia.Editor.Preferences.Easy.Base
+namespace Appalachia.Utility.Editor.Preferences.Easy.Base
 {
     public abstract class EasyEditorPref<T> : EasyEditorPrefBase,
                                               IEquatable<EasyEditorPref<T>>,
@@ -92,11 +92,11 @@ namespace Appalachia.Editor.Preferences.Easy.Base
                 if (actionButton != null)
                 {
                     EditorGUILayout.Space(1.0f, false);
-                    var label = new GUIContent(actionLabel ?? "   ");
+                    var l = new GUIContent(actionLabel ?? "   ");
 
-                    var width = EditorStyles.miniButton.CalcSize(label).x;
+                    var width = EditorStyles.miniButton.CalcSize(l).x;
                     if (GUILayout.Button(
-                        label,
+                        l,
                         EditorStyles.miniButton,
                         GUILayout.Width(width + 10f)
                     ))
