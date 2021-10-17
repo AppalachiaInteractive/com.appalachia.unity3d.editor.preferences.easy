@@ -12,6 +12,12 @@
 ## Releasing
 | Hash | Date | Author | Changes |
 |------|------|--------|---------|
+| 2d5bde97f07a8e6da114f4596e5df1d1563e36ad | 2021-10-16 | Chris Schubert | More project cleanup and refactoring |
+
+
+ ## Tag: `v0.1.10`
+| Hash | Date | Author | Changes |
+|------|------|--------|---------|
 | 610ddaba1f9ffb14abf2f07b669df04374640c75 | 2021-10-04 | Chris Schubert | Code cleanup and refactoring |
 
 
